@@ -6,7 +6,13 @@ import "../stylesheets/App.scss";
 
 class App extends React.Component {
   render() {
-    return <PokeList />;
+    // console.log(pokemons);
+    return (
+      <div>
+        {/* traigo los datos del json */}
+        <PokeList pokemons={pokemons} />;
+      </div>
+    );
   }
 }
 

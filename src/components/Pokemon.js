@@ -1,9 +1,18 @@
 import React from "react";
 
-class Pokemon extends React.Component {
-  render() {
-    return <>Hola mundo Pokemon</>;
-  }
-}
+const Pokemon = (props) => {
+  console.log(props.pokemon.url);
+
+  const cards = props.pokemon.types.map((type) => {
+    return <li key={props.pokemon.id}>{type}</li>;
+  });
+  return (
+    <article>
+      <h2>{props.pokemon.name}</h2>
+
+      <h3>{cards}</h3>
+    </article>
+  );
+};
 
 export default Pokemon;
