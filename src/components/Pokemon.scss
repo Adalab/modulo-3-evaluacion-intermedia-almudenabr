@@ -1,0 +1,30 @@
+.cards {
+  display: inline-block;
+
+  width: 300;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 250px;
+  margin: 15px;
+  border-radius: 0.5rem;
+  background-color: blue;
+  border: 3px solid white;
+}
+
+.img {
+  background: yellow;
+}
+
+.cardName {
+  color: yellow;
+}
+
+.cardType {
+  color: white;
+}

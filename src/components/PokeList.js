@@ -1,28 +1,33 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Pokemon from "./Pokemon";
 
 class PokeList extends React.Component {
   render() {
-    // console.log(this.props.pokemons[0].name);
-
     // lo que quiero pintar
-    const cards = this.props.pokemons.map((pokemon) => {
-      // console.log(pokemon);
-
+    const pokemonCard = this.props.pokemons.map((pokemon) => {
       return (
-        <li key={pokemon.id}>
-          <Pokemon pokemon={pokemon} />
-        </li>
+        <Pokemon
+          key={pokemon.id}
+          name={pokemon.name}
+          img={pokemon.url}
+          types={pokemon.types}
+        />
       );
     });
-    console.log(cards);
     return (
       <div>
         Lista de Pokemon:
-        <ul> {cards}</ul>
+        <ul> {pokemonCard}</ul>
       </div>
     );
   }
 }
+
+PokeList.propTypes = {
+  name: PropTypes.string,
+  img: PropTypes.string,
+  types: PropTypes.string,
+};
 
 export default PokeList;
